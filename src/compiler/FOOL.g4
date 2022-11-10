@@ -22,8 +22,8 @@ exp     : exp TIMES exp                 #times
         | exp EQ exp                    #eq
         | LPAR exp RPAR                 #pars
     	| MINUS? NUM                    #integer        
-	    | TRUE                          #true           //
-	    | FALSE                         #false          //
+	    | TRUE                          #true
+	    | FALSE                         #false
 	    | IF exp THEN CLPAR exp CRPAR 
 	             ELSE CLPAR exp CRPAR   #if             //
 	    | PRINT LPAR exp RPAR           #print          //

@@ -56,6 +56,15 @@ public class AST {
 			return visitor.visitNode(this);
 		}
 	}
+
+	public static class BooleanNode implements Node {
+		Boolean value;
+		BooleanNode(Boolean val) { value = val; }
+		@Override
+		public <S> S accept(BaseASTVisitor<S> visitor) {
+			return visitor.visitNode(this);
+		}
+	}
 }
 
 

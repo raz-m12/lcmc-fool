@@ -66,4 +66,11 @@ public class ASTGenerationSTVisitor extends FOOLBaseVisitor<Node> {
 		System.out.println(indent+"exp: prod with EQUAL");
 		return new EqualNode(visit( ctx.exp(0) ), visit( ctx.exp(1) ));
 	}
+
+	@Override public Node visitTrue(FOOLParser.TrueContext ctx)
+	{
+		boolean res = Boolean.parseBoolean(ctx.TRUE().getText());
+		System.out.println(indent+"exp: prod with TRUE");
+		return new BooleanNode(res);
+	}
 }
