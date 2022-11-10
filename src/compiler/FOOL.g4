@@ -25,7 +25,7 @@ exp     : exp TIMES exp                 #times
 	    | TRUE                          #true
 	    | FALSE                         #false
 	    | IF exp THEN CLPAR exp CRPAR 
-	             ELSE CLPAR exp CRPAR   #if             //
+	             ELSE CLPAR exp CRPAR   #if
 	    | PRINT LPAR exp RPAR           #print          //
         ;  		
   		

@@ -80,4 +80,10 @@ public class ASTGenerationSTVisitor extends FOOLBaseVisitor<Node> {
 		System.out.println(indent+"exp: prod with FALSE");
 		return new BooleanNode(res);
 	}
+
+	@Override public Node visitIf(FOOLParser.IfContext ctx)
+	{
+		System.out.println(indent+"exp: prod with IF");
+		return new IfNode(visit(ctx.exp(0)), visit(ctx.exp(1)), visit(ctx.exp(2)));
+	}
 }

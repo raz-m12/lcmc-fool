@@ -65,6 +65,17 @@ public class AST {
 			return visitor.visitNode(this);
 		}
 	}
+
+	public static class IfNode implements Node {
+		Node condition;
+		Node thenExp;
+		Node elseExp;
+		IfNode(Node cond, Node then, Node _else) { condition = cond; thenExp = then; elseExp = _else; }
+		@Override
+		public <S> S accept(BaseASTVisitor<S> visitor) {
+			return visitor.visitNode(this);
+		}
+	}
 }
 
 
