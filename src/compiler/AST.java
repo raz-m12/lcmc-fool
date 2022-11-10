@@ -76,6 +76,15 @@ public class AST {
 			return visitor.visitNode(this);
 		}
 	}
+
+	public static class PrintNode implements Node {
+		Node exp;
+		PrintNode(Node expression) { exp = expression; }
+		@Override
+		public <S> S accept(BaseASTVisitor<S> visitor) {
+			return visitor.visitNode(this);
+		}
+	}
 }
 
 

@@ -56,6 +56,12 @@ public class PrintASTVisitor extends BaseASTVisitor<Void> {
 		visit(n.elseExp);
 		return null;
 	}
+
+	public Void visitNode(PrintNode n) {
+		printNode(n);
+		visit(n.exp);
+		return null;
+	}
 }
 
 

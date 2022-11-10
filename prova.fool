@@ -1,4 +1,9 @@
-if 2==3 then { 4 } else { 5 };
+print(
+  if (5+3)*-7 == -56
+    then { 8 }
+    else { false }
+);
+/*if 2==3 then { 4 } else { 5 };*/
 /*if 2==3 then { 4 } else { 5 };*/
 /*false==false;*/
 /*4==4;*/

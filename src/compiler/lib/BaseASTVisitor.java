@@ -48,5 +48,6 @@ public class BaseASTVisitor<S> {
 	public S visitNode(EqualNode n) { throw new UnimplException(); }
 	public S visitNode(BooleanNode n) { throw new UnimplException(); }
 	public S visitNode(IfNode n) { throw new UnimplException(); }
+	public S visitNode(PrintNode n) { throw new UnimplException(); }
 }
 

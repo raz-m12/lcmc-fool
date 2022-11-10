@@ -50,6 +50,11 @@ public class CalcASTVisitor extends BaseASTVisitor<Integer> {
 		return ifthen == 1 ? visit(n.thenExp): visit(n.elseExp);
 	}
 
+	@Override
+	public Integer visitNode(PrintNode n) {
+		if (print) printNode(n);
+		return visit(n.exp);
+	}
 }
 
 //    CalcASTVisitor() {}
