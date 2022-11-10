@@ -19,7 +19,7 @@ prog    : exp SEMIC EOF ;
 // if contiene 3 figli COND-THEN-ELSE
 exp     : exp TIMES exp                 #times
         | exp PLUS exp                  #plus
-        | exp EQ exp                    #eq       //
+        | exp EQ exp                    #eq
         | LPAR exp RPAR                 #pars
     	| MINUS? NUM                    #integer        
 	    | TRUE                          #true           //

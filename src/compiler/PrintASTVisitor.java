@@ -36,6 +36,14 @@ public class PrintASTVisitor extends BaseASTVisitor<Void> {
 		//System.out.println(indent + "Int: " + n.val);  // must also print value!
 		return null;
 	}
+
+	public Void visitNode(EqualNode n) {
+		printNode(n);
+		visit(n.left);
+		visit(n.right);
+		//System.out.println(indent + "Int: " + n.val);  // must also print value!
+		return null;
+	}
 }
 
 

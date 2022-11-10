@@ -31,6 +31,12 @@ public class CalcASTVisitor extends BaseASTVisitor<Integer> {
         return n.val;
 	}
 
+	@Override
+	public Integer visitNode(EqualNode n) {
+		if (print) printNode(n);
+		return visit(n.left) == visit(n.right)? 1: 0;
+	}
+
 }
 
 //    CalcASTVisitor() {}

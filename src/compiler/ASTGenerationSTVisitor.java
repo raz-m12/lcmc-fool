@@ -59,5 +59,11 @@ public class ASTGenerationSTVisitor extends FOOLBaseVisitor<Node> {
 		System.out.println(indent+"exp: prod with "+(minus?"MINUS ":"")+"NUM "+res);
 		return new IntNode(minus? -res: res);
 	}
-	
+
+	@Override
+	public Node visitEq(FOOLParser.EqContext ctx)
+	{
+		System.out.println(indent+"exp: prod with EQUAL");
+		return new EqualNode(visit( ctx.exp(0) ), visit( ctx.exp(1) ));
+	}
 }

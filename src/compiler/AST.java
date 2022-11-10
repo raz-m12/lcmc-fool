@@ -46,6 +46,16 @@ public class AST {
 			return visitor.visitNode(this);
 		}
 	}
+
+	public static class EqualNode implements Node {
+		Node left;
+		Node right;
+		EqualNode(Node l, Node r) { left=l; right=r; }
+		@Override
+		public <S> S accept(BaseASTVisitor<S> visitor) {
+			return visitor.visitNode(this);
+		}
+	}
 }
 
 
